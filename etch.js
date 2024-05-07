@@ -24,11 +24,11 @@ btn.addEventListener("click", () => {
   });
 
 function createGrid(gridSide){
-    // this line of code makes sure each div is the respective percentage of width/height of client window height and width
+    // this line of code makes sure each div is the respective percentage of width/height of container
     // have to zero out margins and borders of certain elements (like body and div) to make sure the correct number of divs fit per side.
     let divsPerSide = (100/gridSide).toString() + "%";
 
-    // create div 
+    // create divs for grid 
     for (let i = 0; i < Math.pow(gridSide,2); i++){
         const div = document.createElement("div");
         div.style.width = divsPerSide;
